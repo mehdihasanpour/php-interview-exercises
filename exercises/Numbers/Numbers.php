@@ -10,4 +10,14 @@ namespace Exercises\Numbers;
  */
 final class Numbers
 {
+    public static function add(int $n): int
+    {
+        $sum = 0;
+        for($i=1; $i<=$n; $i++){
+            $sum += $i;
+        }
+        return $sum;
+    }
 }
+
+var_dump(Numbers::add(3));
