@@ -15,4 +15,20 @@ namespace Exercises\FizzBuzz;
  */
 final class FizzBuzz
 {
+    public static function print(string $number): void
+    {
+        for ($i = 1; $i <= $number; $i++) {
+            $result = '';
+            if ($i % 3 === 0) {
+                $result .= 'fizz';
+            }
+            if ($i % 5 === 0) {
+                $result .= 'buzz';
+            }
+            
+            echo $result ? "{$result}, " :"{$i}, " ; 
+        }
+    }
 }
+
+FizzBuzz::print('15');
