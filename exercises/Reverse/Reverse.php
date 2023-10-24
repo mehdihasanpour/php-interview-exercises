@@ -19,4 +19,31 @@ namespace Exercises\Reverse;
  */
 final class Reverse
 {
+    public static function int(int $n): int
+    {
+        $castToString = (string) $n;
+        $lengthOfNumber = strlen($castToString);
+        $reversedString = '';
+        for($i = 0; $i < $lengthOfNumber; $i++){
+            $reversedString .= $castToString[$lengthOfNumber - $i -1];
+        }
+
+        if($n < 0){
+            return (int) $reversedString * -1;
+        }
+        return (int)$reversedString;
+    }
+
+    public static function string(string $string): string
+    {
+        $lengthOfNumber = strlen($string);
+        $reversedString = '';
+        for($i = 0; $i < $lengthOfNumber; $i++){
+            $reversedString .= $string[$lengthOfNumber - $i -1];
+        }
+        return $reversedString;
+    }
 }
+
+// var_dump(Reverse::int(-12));
+// var_dump(Reverse::string('mehdi'));
